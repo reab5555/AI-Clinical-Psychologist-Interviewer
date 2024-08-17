@@ -8,7 +8,14 @@ This platform is ideal for educational, research, and preliminary assessment pur
 
 ## Features
 
-This platform integrates several sophisticated features to deliver its functionalities seamlessly. It conducts interviews with preset psychological questions, understands user responses, and generates contextually relevant follow-up questions using NLP. It supports audio interactions by converting text questions into speech and transcribing user audio responses into text. Moreover, it automatically generates detailed clinical reports based on the interviews, and users can upload TXT, PDF, or DOCX files to create reports from document content. Multi-language support ensures that interviews and reports can be conducted and generated in the user’s preferred language.
+**Key Features**:
+- **Simulated Interviews**: Conducts interviews with preset psychological questions.
+- **Natural Language Processing**: Understands and generates contextually relevant questions.
+- **LangChain**: To create NLP chains for interview and report generation.
+- **Audio Interaction**: Converts text questions to speech and transcribes audio responses to text.
+- **Report Generation**: Automatically creates comprehensive clinical reports after each session.
+- **Document Upload for Reports**: Generates reports from uploaded TXT, PDF, or DOCX files.
+- **Multi-language Support**: Conducts interviews and generates reports in the user's preferred language.
 
 ## Retrieval-Augmented Generation (RAG) and Document Retrieval Process
 
