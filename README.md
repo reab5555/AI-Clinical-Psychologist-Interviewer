@@ -17,7 +17,7 @@ This platform is ideal for educational, research, and preliminary assessment pur
 - **Document Upload for Reports**: Generates reports from uploaded TXT, PDF, or DOCX files.
 - **Multi-language Support**: Conducts interviews and generates reports in the user's preferred language.
 
-<img src="appendix/diagram.png" width="400" alt="alt text">
+<img src="appendix/diagram.png" width="600" alt="alt text">
 
 ## Retrieval-Augmented Generation (RAG) and Document Retrieval Process
 
