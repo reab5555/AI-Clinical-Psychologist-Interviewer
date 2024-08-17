@@ -73,6 +73,7 @@ def create_app():
             """
             # Clinical Psychologist Interviewer 𝚿
             This chatbot conducts clinical interviews based on psychological knowledge.
+            
             Please note that this is a simulation and should not be used as a substitute for professional medical advice.
 
             The interviewer will prepare a clinical report based on the interview.
