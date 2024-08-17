@@ -17,7 +17,6 @@ This platform is ideal for educational, research, and preliminary assessment pur
 - **Document Upload for Reports**: Generates reports from uploaded TXT, PDF, or DOCX files.
 - **Multi-language Support**: Conducts interviews and generates reports in the user's preferred language.
 - **Selectable Interviewers**: Users can select their preferred interviewer, each with a different professional background, experience, and temperament. Options include:
-
     - Sarah: An empathic, compassionate clinical psychologist with over 30 years of experience, specializing in trauma, anxiety disorders, and family therapy.
     - Aaron: A tough minded, clinical psychologist with over 15 years of experience, specializing in stress, trauma, and high-performance demands, with a background as a military officer.
   
