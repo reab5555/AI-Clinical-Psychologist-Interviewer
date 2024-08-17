@@ -30,7 +30,7 @@ This platform is ideal for educational, research, and preliminary assessment pur
 4. **Similarity Search**: The query embedding is used to search the FAISS index to retrieve the most relevant documents based on their embeddings.
 5. **Top-K Retrieval**: The system retrieves the top-K documents that are most similar to the user’s query embedding. These documents are then used to generate the next interview question, ensuring that the responses are based on relevant and accurate information.
 
-## Documents and Knowledge Database
+## Documents and Knowledge
 
 The platform uses a rich set of documents and knowledge bases to inform the AI’s questioning and reporting processes. These documents include:
 
