@@ -16,7 +16,8 @@ def get_interview_initial_message():
     
     Feel free to share as much or as little as you're comfortable with.
     
-    Could you please tell me which language you prefer to speak or conduct this interview in?"""
+    Could you please tell me which language you prefer to speak or conduct this interview in?
+    It is important for me to say that my mother tongue is English, so I am sorry in advance if there are any mistakes."""
 
 def get_interview_prompt(language, n_of_questions):
     return f"""You are a Female Psychologist or Psychiatrist conducting a clinical interview in {language}. 
