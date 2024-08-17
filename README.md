@@ -15,14 +15,9 @@ This platform is ideal for educational, research, and preliminary assessment pur
 - **Report Generation**: Automatically creates comprehensive clinical reports after each session.
 - **Document Upload for Reports**: Generates reports from uploaded TXT, PDF, or DOCX files.
 - **Multi-language Support**: Conducts interviews and generates reports in the user's preferred language.
-
-**Technologies Used**:
-- Gradio: For the user interface.
-- LangChain: To create NLP chains for interview and report generation.
-- OpenAI: For language models and text-to-speech conversion.
-- FAISS: Document retrieval.
-- PyPDF2 and python-docx: File handling.
-- ReportLab: PDF generation.
+- **LangChain**: To create NLP chains for interview and report generation.
+- **OpenAI**: For language models and text-to-speech conversion.
+- **FAISS**: Document retrieval.
 
 ## User Interface
 
