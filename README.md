@@ -1,6 +1,6 @@
-# Clinical Psychologist Interviewer 𝚿
+<img src="appendix/icon.jpeg" width="100" alt="alt text">
 
-![Clinical Psychologist Interviewer 𝚿 Icon](appendix/icon.jpeg)
+# Clinical Psychologist Interviewer 𝚿
 
 **Clinical Psychologist Interviewer 𝚿** is an AI platform designed to simulate clinical interviews. It leverages NLP and speech technologies to emulate a clinical psychologist, offering insightful assessments and generating detailed clinical reports. 
 
@@ -16,6 +16,8 @@ This platform is ideal for educational, research, and preliminary assessment pur
 - **Report Generation**: Automatically creates comprehensive clinical reports after each session.
 - **Document Upload for Reports**: Generates reports from uploaded TXT, PDF, or DOCX files.
 - **Multi-language Support**: Conducts interviews and generates reports in the user's preferred language.
+
+<img src="appendix/diagram.png" width="400" alt="alt text">
 
 ## Retrieval-Augmented Generation (RAG) and Document Retrieval Process
 
