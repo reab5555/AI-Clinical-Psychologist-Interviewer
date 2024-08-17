@@ -1,0 +1,9 @@
+gradio
+PyPDF2
+python-docx
+reportlab
+langchain-openai
+openai
+faiss-cpu
+python-dotenv
+langchain_community
