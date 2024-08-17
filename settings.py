@@ -43,7 +43,7 @@ language = None
 def generate_random_string(length=5):
     return ''.join(random.choices(string.ascii_letters + string.digits, k=length))
 
-def respond(message, history):
+def respond(message, history, voice, selected_interviewer):
     global question_count, interview_history, combined_retriever, last_audio_path, initial_audio_path, language, interview_retrieval_chain, report_retrieval_chain
 
     if not isinstance(history, list):
@@ -66,7 +66,7 @@ def respond(message, history):
                 language = message.strip().lower()
                 # Reinitialize the interview chain with the new language
                 interview_retrieval_chain, report_retrieval_chain, combined_retriever = setup_knowledge_retrieval(
-                    llm, language)
+                    llm, language, selected_interviewer)
 
             if question_count < n_of_questions:
                 result = interview_retrieval_chain.invoke({
@@ -84,7 +84,7 @@ def respond(message, history):
             if question:
                 random_suffix = generate_random_string()
                 speech_file_path = Path(__file__).parent / f"question_{question_count}_{random_suffix}.mp3"
-                convert_text_to_speech(question, speech_file_path)
+                convert_text_to_speech(question, speech_file_path, voice)
                 print(f"Question {question_count} saved as audio at {speech_file_path}")
 
                 # Remove the last audio file if it exists
@@ -99,7 +99,7 @@ def respond(message, history):
             question = f"Can you elaborate on that? (in {language})"
             if question_count < n_of_questions:
                 speech_file_path = Path(__file__).parent / f"question_{question_count}.mp3"
-                convert_text_to_speech(question, speech_file_path)
+                convert_text_to_speech(question, speech_file_path, voice)
                 print(f"Question {question_count} saved as audio at {speech_file_path}")
 
                 if last_audio_path and os.path.exists(last_audio_path):

@@ -6,16 +6,15 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.retrievers import EnsembleRetriever
 from ai_config import n_of_questions, openai_api_key
-from prompt_instructions import get_interview_prompt, get_report_prompt
+from prompt_instructions import get_interview_prompt_sarah, get_interview_prompt_aaron, get_report_prompt
 
 n_of_questions = n_of_questions()
 
-def setup_knowledge_retrieval(llm, language='english'):
+def setup_knowledge_retrieval(llm, language='english', voice='Sarah'):
     embedding_model = OpenAIEmbeddings(openai_api_key=openai_api_key)
 
     documents_faiss_index = FAISS.load_local("knowledge/faiss_index_all_documents", embedding_model,
                                                allow_dangerous_deserialization=True)
-
 
     documents_retriever = documents_faiss_index.as_retriever()
 
@@ -23,10 +22,16 @@ def setup_knowledge_retrieval(llm, language='english'):
         retrievers=[documents_retriever]
     )
 
-    interview_prompt = ChatPromptTemplate.from_messages([
-        ("system", get_interview_prompt(language, n_of_questions)),
-        ("human", "{input}")
-    ])
+    if voice == 'Sarah':
+        interview_prompt = ChatPromptTemplate.from_messages([
+            ("system", get_interview_prompt_sarah(language, n_of_questions)),
+            ("human", "{input}")
+        ])
+    else:
+        interview_prompt = ChatPromptTemplate.from_messages([
+            ("system", get_interview_prompt_aaron(language, n_of_questions)),
+            ("human", "{input}")
+        ])
 
     report_prompt = ChatPromptTemplate.from_messages([
         ("system", get_report_prompt(language)),
