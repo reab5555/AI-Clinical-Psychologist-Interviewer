@@ -66,8 +66,8 @@ def create_app():
 
     temp_audio_files.append(initial_audio_path)
 
-    with gr.Blocks(title="Clinical Psychologist Interviewer 𝚿") as demo:
-        gr.Image(value="appendix/icon.jpeg", label='icon', width=20, scale=1, show_label=False,
+    with gr.Blocks(title="AI Clinical Psychologist Interviewer 𝚿") as demo:
+        gr.Image(value="appendix/icon.jpeg", label='icon', width=20, scale=1, show_label=False, show_fullscreen_button=False,
                  show_download_button=False, show_share_button=False)
         gr.Markdown(
             """
@@ -82,7 +82,7 @@ def create_app():
 
         with gr.Tab("Interview"):
             with gr.Row():
-                reset_button = gr.Button("Select Interviewer", size='sm', scale=1, icon='appendix/psi.png')
+                reset_button = gr.Button("Select Interviewer", size='sm', scale=1)
                 voice_radio = gr.Radio(["Sarah", "Aaron"], label="Select Interviewer", value="Sarah", scale=1, info='Each interviewer has a unique approach and a different professional background.')
                 audio_output = gr.Audio(
                     label="Sarah",
@@ -164,8 +164,7 @@ def create_app():
 
         with gr.Tab("Upload Document"):
             file_input = gr.File(label="Upload a TXT, PDF, or DOCX file")
-            language_input = gr.Textbox(label="Preferred Language for Report",
-                                        placeholder="Enter language")
+            language_input = gr.Textbox(label="Preferred Language for Report")
             generate_button = gr.Button("Generate Report")
             report_output = gr.Textbox(label="Generated Report", lines=100)
             pdf_output = gr.File(label="Download Report", visible=True)

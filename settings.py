@@ -162,6 +162,8 @@ def generate_report_from_file(file, language):
         if file_content == "No file uploaded" or file_content == "Unsupported file format" or file_content == "Unable to read file":
             return file_content
 
+        file_content = file_content[:100000]
+        
         report_language = language.strip().lower() if language else "english"
         print('preferred language:', report_language)
         print(f"Generating report in language: {report_language}")  # For debugging

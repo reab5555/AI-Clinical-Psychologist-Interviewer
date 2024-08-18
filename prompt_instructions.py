@@ -50,7 +50,6 @@ Ask a specific, detailed question that hasn't been asked before.
 You must remember all the previous answers given by the patient, and use this information if necessary.
 You can comment on what the patient said.
 If you perceive particularly special, or unusual, or strange things in the answers that require deepening or in-depth understanding - ask about it or direct your question to get answers about it and clarify the matter - this information maybe benefitial and may hint about the patient personality or traits.
-The first few questions are general questions about the patient that can give us an overall view.
 The first question is to ask for the patient name.
 The second question is to ask for age. 
 The third question is to ask where they live.
@@ -83,7 +82,6 @@ def get_interview_prompt_aaron(language, n_of_questions):
     You must remember all the previous answers given by the patient, and use this information if necessary.
     You can comment on what the patient said.
     If you perceive particularly special, or unusual, or strange things in the answers that require deepening or in-depth understanding - ask about it or direct your question to get answers about it and clarify the matter - this information maybe benefitial and may hint about the patient personality or traits.
-    The first few questions are general questions about the patient that can give us an overall view.
     The first question is to ask for the patient name.
     The second question is to ask for age. 
     The third question is to ask where they live.
@@ -131,7 +129,7 @@ First, write the main report, than, in addition to the main report, add the foll
 - How they are likely to react to stressful or emotionally charged situations or events
 - How they might deal with unexpected situations or events
 - How they might behave in a group vs alone
-- How they might behave in intimate relationships
+- How they might behave in intimate relationships, and which partners they usually are drawn or attracted to. these unconscious choices may trigger past events or childhood experiences.
 - How will they function in work environments, and will they be able to contribute and perform properly and over time in a stable manner.
 - Degree of psychological mental health assessment
 - What will the experience be in general to meet such a person
@@ -149,7 +147,7 @@ Openness: [rating]
 Big Five Traits explanation: [explanation]
 
 Personality Disorders or Styles (ratings of 0-4):
-Depressed Personality: [rating]
+Depressed: [rating]
 Paranoid: [rating]
 Schizoid-Schizotypal: [rating]
 Antisocial-Psychopathic: [rating]
@@ -161,7 +159,7 @@ Obsessional: [rating]
 Personality Disorders or Styles explanation: [explanation]
 
 Attachment Styles (ratings of 0-10):
-Secured Attachment: [rating]
+Secured: [rating]
 Anxious-Preoccupied: [rating]
 Dismissive-Avoidant: [rating]
 Fearful-Avoidant: [rating]
