@@ -73,10 +73,12 @@ def create_app():
             """
             # Clinical Psychologist Interviewer 𝚿
             This chatbot conducts clinical interviews based on psychological knowledge.
-            
-            Please note that this is a simulation and should not be used as a substitute for professional medical advice.
 
             The interviewer will prepare a clinical report based on the interview.
+            
+            * Please note that this is a simulation and should not be used as a substitute for professional medical advice.
+            * It is important to emphasize that any information shared is confidential and cannot be accessed. 
+            * In any case, it is recommended not to share sensitive information.
             """
         )
 
@@ -163,10 +165,15 @@ def create_app():
             )
 
         with gr.Tab("Upload Document"):
+            gr.Markdown('Please upload a document that contains content written about a patient or by the patient.')
+            gr.Markdown('* Maximum length is up to 100K characters.')
+            gr.Markdown('* It is important to emphasize that the uploaded document is confidential and cannot be accessed.')
+            gr.Markdown('* In any case, it is recommended not to upload sensitive documents.')
             file_input = gr.File(label="Upload a TXT, PDF, or DOCX file")
-            language_input = gr.Textbox(label="Preferred Language for Report")
+            #language_input = gr.Textbox(label="Preferred Language for Report")
+            language_input = 'English'
             generate_button = gr.Button("Generate Report")
-            report_output = gr.Textbox(label="Generated Report", lines=100)
+            report_output = gr.Textbox(label="Generated Report", lines=100, visible=False)
             pdf_output = gr.File(label="Download Report", visible=True)
 
             def generate_report_and_pdf(file, language):
@@ -175,7 +182,7 @@ def create_app():
 
             generate_button.click(
                 generate_report_and_pdf,
-                inputs=[file_input, language_input],
+                inputs=[file_input],
                 outputs=[report_output, pdf_output, pdf_output]
             )
         with gr.Tab("Description"):

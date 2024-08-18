@@ -201,7 +201,10 @@ def generate_interview_report(interview_history, language):
         return f"An error occurred while generating the report: {str(e)}", None
 
 def create_pdf(content):
-    temp_file = tempfile.NamedTemporaryFile(delete=False, suffix='.pdf')
+
+    random_string = generate_random_string()
+    
+    temp_file = tempfile.NamedTemporaryFile(delete=False, suffix=f'_report.pdf')
     doc = SimpleDocTemplate(temp_file.name, pagesize=letter)
     styles = getSampleStyleSheet()
 
