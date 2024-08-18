@@ -10,7 +10,6 @@ def n_of_questions():
 #openai_api_key = os.environ.get("openai_api_key")
 openai_api_key = 'your_openai_api_key'
 
-
 model = "gpt-4o-mini"
 
 def load_model(openai_api_key):
@@ -27,7 +26,7 @@ client = OpenAI(api_key=openai_api_key)
 def convert_text_to_speech(text, output, voice):
     try:
         # Convert the final text to speech
-        response = client.audio.speech.create(model="tts-1-hd", voice=voice, input=text, speed=1.1)
+        response = client.audio.speech.create(model="tts-1-hd", voice=voice, input=text)
 
         if isinstance(output, BytesIO):
             # If output is a BytesIO object, write directly to it
@@ -42,7 +41,7 @@ def convert_text_to_speech(text, output, voice):
     except Exception as e:
         print(f"An error occurred: {e}")
         # Fallback in case of error
-        response = client.audio.speech.create(model="tts-1-hd", voice=voice, input='Here is my Report.', speed=1.1)
+        response = client.audio.speech.create(model="tts-1-hd", voice=voice, input='Here is my Report.')
 
         if isinstance(output, BytesIO):
             for chunk in response.iter_bytes():
