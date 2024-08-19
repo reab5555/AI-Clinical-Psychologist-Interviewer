@@ -67,7 +67,7 @@ def create_app():
     temp_audio_files.append(initial_audio_path)
 
     with gr.Blocks(title="AI Clinical Psychologist Interviewer 𝚿") as demo:
-        gr.Image(value="appendix/icon.jpeg", label='icon', width=20, scale=1, show_label=False, show_fullscreen_button=False,
+        gr.Image(value="appendix/icon.jpeg", label='icon', width=20, scale=1, show_label=False,
                  show_download_button=False, show_share_button=False)
         gr.Markdown(
             """
