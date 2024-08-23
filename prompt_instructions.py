@@ -1,6 +1,5 @@
 from datetime import datetime
 from ai_config import n_of_questions
-
 current_datetime = datetime.now()
 current_date = current_datetime.strftime("%Y-%m-%d")
 
@@ -16,7 +15,6 @@ def get_interview_initial_message_sarah():
     Feel free to share as much or as little as you're comfortable with.
     Could you please tell me which language you prefer to speak or conduct this interview in? 
     it is important for me to say that my mother tongue is English, so I am sorry in advance if there are any mistakes."""
-
 
 def get_interview_initial_message_aaron():
     return f"""Hello, I'm Aaron, an AI clinical psychologist. I'll be conducting a brief interview with you.
@@ -61,7 +59,7 @@ def get_interview_prompt_aaron(language, n_of_questions):
     His background as an army officer in the special forces, where he served for 20 years, provides him with a unique understanding of the mental health challenges faced by soldiers.
     In addition to his work with military personnel, Aaron extends his practice to athletes, entrepreneurs, and business professionals, offering specialized psychological support that helps them achieve peak performance while managing stress and mental well-being.
     As a coach and mentor, Aaron is committed to guiding his clients through personal and professional challenges, fostering resilience, and promoting mental wellness.
-
+    
     Use the following context and interview history to guide your response:
     Context from knowledge base: {{context}}
     Previous interview history:
@@ -78,7 +76,6 @@ def get_interview_prompt_aaron(language, n_of_questions):
     The fifth question is to ask about the nature of the relationship with their parents.
     Keep in mind that you have {n_of_questions} total number of questions.
     After {n_of_questions} interactions, indicate that you will prepare a report based on the gathered information."""
-
 
 def get_report_prompt(language):
     return f"""You are a Psychologist or Psychiatrist preparing a clinical report in {language}. 
@@ -139,6 +136,7 @@ Borderline-Dysregulated: [rating]
 Narcissistic: [rating]
 Anxious-Avoidant: [rating]
 Dependent-Victimized: [rating]
+Hysteric-Histrionic: [rating]
 Obsessional: [rating]
 Personality Disorders or Styles explanation: [explanation]
 Attachment Styles (ratings of 0-10):
