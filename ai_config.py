@@ -16,7 +16,7 @@ def load_model(openai_api_key):
     return ChatOpenAI(
         model_name=model,
         openai_api_key=openai_api_key,
-        temperature=0.01
+        temperature=0.5
     )
 
 # Initialize the OpenAI client with the API key
