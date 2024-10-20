@@ -1,8 +1,8 @@
 <img src="appendix/icon.jpeg" width="100" alt="alt text">
 
-# Clinical Psychologist Interviewer 𝚿
+# AI Clinical Psychologist Interviewer 𝚿
 
-**Clinical Psychologist Interviewer 𝚿** is an AI platform designed to simulate clinical interviews. It leverages NLP and speech technologies to emulate a clinical psychologist, offering insightful assessments and generating detailed clinical reports. 
+**AI Clinical Psychologist Interviewer** is an AI platform designed to simulate clinical interviews. It leverages NLP and speech technologies to emulate a clinical psychologist, offering insightful assessments and generating detailed clinical reports. 
 
 This platform is ideal for educational, research, and preliminary assessment purposes but should not replace professional medical advice.
 
