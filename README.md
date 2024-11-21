@@ -6,6 +6,8 @@
 
 This platform is ideal for educational, research, and preliminary assessment purposes but should not replace professional medical advice.
 
+Use the hosted demo: [AI Clinical Psychologist Interviewer Demo](https://huggingface.co/spaces/reab5555/AI-Clinical-Psychologist-Interviewer)
+
 ## Features
 
 **Key Features**:
